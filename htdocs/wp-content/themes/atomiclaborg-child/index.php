@@ -10,6 +10,12 @@
             'post_type' => 'page',
             'post_status' => 'publish'
         ));
+    
+    	while (have_posts()) {
+		
+	}
+	
+	wp_reset_wuery();
     ?>
 
     <!-- Indicators -->
