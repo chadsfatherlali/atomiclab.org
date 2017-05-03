@@ -12,10 +12,16 @@
         ));
     
     	while (have_posts()) {
-		
-	}
+		the_post(); ?>
 	
-	wp_reset_wuery();
+	<?php 
+		echo get_the_ID();
+		var_dump(get_field('mostrar_en_carousel_principal', get_the_ID())); 
+	?>   	
+
+    <?php }
+	
+	wp_reset_query();
     ?>
 
     <!-- Indicators -->
