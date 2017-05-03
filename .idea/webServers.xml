@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6628b8c1-c0cd-49db-b1e2-304d9d19a2d9" name="atomiclaborg" url="http://184.73.75.44/">
+        <fileTransfer host="184.73.75.44" port="22" privateKey="$USER_HOME$/Downloads/LightsailDefaultPrivateKey.pem" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
