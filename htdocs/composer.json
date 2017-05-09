@@ -26,7 +26,7 @@
     "autoload": {
         "psr-0": { 
  	     "": "src/",
-	     "Controller": "src/"
+	     "Controllers": "src/"
 	}
     },
     "extra": {
