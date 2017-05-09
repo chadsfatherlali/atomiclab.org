@@ -8,24 +8,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 //Request::setTrustedProxies(array('127.0.0.1'));
 
-#$app->get('/', function () use ($app) {
-   #return $app['twig']->render('index.html.twig', array());
-#})->bind('homepage');
-
-$app->get('/', new Controller\IndexController())->bind('homepage');
-
-$app->get('/test', function () use ($app) {
-    return $app->json(array('dev' => 0));
-})->bind('testpage');
-
-
-$app->get('/test-1', function () use ($app) {
-    return $app->json(array('dev' => 1));
-})->bind('testpage1');
-
-$app->get('/test-2', function () use ($app) {
-    return $app->json(array('dev' => 2));
-})->bind('testpage2');
+$app->mount('/', new Controller\IndexController());
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
