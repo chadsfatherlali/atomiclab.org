@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="6628b8c1-c0cd-49db-b1e2-304d9d19a2d9" name="atomiclaborg" url="http://184.73.75.44/">
-        <fileTransfer host="184.73.75.44" port="22" privateKey="$USER_HOME$/Downloads/LightsailDefaultPrivateKey.pem" accessType="SFTP" keyPair="true">
+        <fileTransfer host="184.73.75.44" port="22" privateKey="$USER_HOME$/Descargas/LightsailDefaultPrivateKey.pem" accessType="SFTP" username="bitnami" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
