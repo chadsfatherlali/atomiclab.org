@@ -1,5 +1,212 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    Welcome to your new Silex Application!
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="{{ asset('images/logo.png') }}" width="80" height=""></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" class="scroll hvr-underline-from-center"><a href="index.html">Inicio</a></li>
+                    <li><a class="scroll hvr-underline-from-center" href="#about">¿Quienes Somos?</a></li>
+                    <li><a class="scroll hvr-underline-from-center" href="#service">Proyectos</a></li>
+                    <li><a class="scroll hvr-underline-from-center" href="#team">Contacto</a></li>
+                    <li><a class="scroll hvr-underline-from-center" href="#" role="button">¡Pedir una Protesis!</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- /Fixed navbar -->
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="{{ asset('images/1.jpg') }}" alt="First slide" class="img-responsive">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Atomic Lab</h1>
+                        <p>Somos átomos libres, si pudiéramos modificarnos, lo haríamos, pero crear los inventos que cambien la vida a millones de personas será suficiente.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">¿Quienes Somos?</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="first-slide" src="{{ asset('images/1.jpg') }}" alt="First slide" class="img-responsive">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>¡Danos una mano!</h1>
+                        <p>Estamos muy contentos de anunciarles esta nueva metodología de donación que implementamos. Podés donar una mano o un brazo a una persona que lo necesite, por transferencia bancaria, efectivo, tarjeta de débito o tarjeta de crédito. ¡Conoce más y ayudanos a seguir creciendo!(Click en el botón)</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">¡Dar una mano!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="{{ asset('images/2.jpg') }}" alt="Second slide" class="img-responsive">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>¿Que hacemos?</h1>
+                        <p>En Atomic Lab trabajamos en equipo para crear soluciones que cambien la vida a millones de personas en el mundo mediante las últimas tecnologías.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Proyectos</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="third-slide" src="{{ asset('images/3.png') }}" alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Conocé Limbs</h1>
+                        <p>Limbs es el proyecto de Atomic Lab que tiene por objetivo convertir a todos los chicos en superhéroes, imprimiendo y entregando de forma gratuita, prótesis de manos y brazos en 3D a todo aquel que las necesite.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Limbs</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="fourth-slide" src="{{ asset('images/3.png') }}" alt="Four slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Conocé Limbs</h1>
+                        <p>Limbs es el proyecto de Atomic Lab que tiene por objetivo convertir a todos los chicos en superhéroes, imprimiendo y entregando de forma gratuita, prótesis de manos y brazos en 3D a todo aquel que las necesite.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Limbs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div><!-- /.carousel -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+        <div class="sponsors">
+        </div>
+        <div class="sponsors">
+            <img src="{{ asset('images/sponsors/Microsoft1.png') }}" width="180"><img src="{{ asset('images/sponsors/sheraton1.png') }}" width="140"><img src="{{ asset('images/sponsors/movistar1.png') }}" width="100"><img src="{{ asset('images/sponsors/innovadores1.png') }}" width="180">
+
+        </div>
+        <br><br><br>
+        <!-- Three columns of text below the carousel -->
+        <center>
+            <div class="borde">
+                <div>
+                    <h3>ATOMIC LAB</h3>
+                    <hr>
+                    <center><img class="img-responsive" src="{{ asset('images/atomic.png') }}" width="80" height="" alt="Generic placeholder image"></center>
+                    <hr>
+                    <p><h4>Somos impulsados por una necesidad incesante de superar retos, cambiarle la vida a la gente, generar impacto, inventar un mundo inventor, en Atomic creemos que tenemos las "cicatrices" para probarlo. Trabajamos en distintas áreas, como electrónica, ingeniería, robótica, programación, ciencias exactas, marketing, impresión 3D, realidad virtual y aumentada, entretenimiento y muchas otras tecnologías disruptivas emergentes.</h4></p>
+                    <hr>
+                    <p><a class="btn btn-default" href="quienes-somos.html" role="button">¡Conocenos Más!</a></p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="borde">
+                <div>
+                    <h3>PROYECTOS</h3>
+                    <hr>
+                    <p><h4>Unimos unos &aacute;tomos de forma creativa para ayudar al mundo con decenas de inventos que pueden revolucionar la historia. Les hacemos muestra de nuestros dos principales proyectos, ¡pero puede visitar nuestra sección "Proyectos" para ver absolutamente todos nuestros inventos!</h4></p>
+                    <hr>
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                            <h1 class="featurette-heading"><span class="text-muted">LIMBS</span></h1>
+                            <p class="lead">Es el proyecto de Atomic Lab que tiene por objetivo convertir a todos los chicos en superhéroes, imprimiendo y entregando de forma gratuita, prótesis de manos y brazos en 3D a todo aquel que las necesite.</p>
+                            <p><a href="limbs.html">¡Ir a Limbs!</a></p>
+                        </div>
+                        <div class="col-md-5">
+                            <!--<div class="col-md-5 col-md-pull-7">-->
+                            <img src="../imagenes/limbs.png" width="260" height="260" alt="Generic placeholder image">
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row featurette">
+                        <div class="col-md-7 col-md-push-5">
+                            <h1 class="featurette-heading"> <span class="text-muted">UNBLINDER</span></h1>
+                            <p class="lead">Aplicación especialmente desarrollada para no videntes, solamente sacando una foto te avisará mediante voz qué es lo que estás viendo, podrás diferenciar desde una manzana verde contra una roja, como así también si un frasco dice “Shampoo” o “Acondicionador”.</p>
+                            <p><a href="limbs.html">¡Ir a Unblinder!</a></p>
+                        </div>
+                        <div class="col-md-5 col-md-pull-7">
+                            <img src="{{ asset('images/unblinder.png') }}" width="260" height="260" alt="Generic placeholder image">
+                        </div>
+                    </div>
+                    <hr>
+                    <p><h4>¡Y muchos proyectos más que quisieramos mostrarle!. (Click en el botón)</h4></p>
+                    <hr>
+                    <p><a class="btn btn-default" href="#" role="button">¡Ver todos los proyectos!</a></p>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="borde">
+
+                <div class="row">
+                    <div class="col-md-7">
+
+                        <form role="form" style="margin: 10px;">
+
+                            <br style="clear:both">
+                            <h3 style="margin-bottom: 25px; text-align: center;">CONTACTANOS!</h3>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Telefono" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" type="textarea" id="message" placeholder="Mensaje" maxlength="140" rows="7"></textarea>
+                                <span class="help-block"><p id="characterLeft" class="help-block ">Has llegado al limite</p></span>
+                            </div>
+
+                            <button type="button" id="submit" name="submit" class="btn btn-primary">Enviar</button>
+
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        </br></br></br></br>
+                        <h3>NUESTRAS REDES</h3>
+                        <hr><h4>nosotros@atomiclab.org</h4><hr>
+                        <ul class="list banner-social-buttons">
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a></li>
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+                            <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </center>
+
+    </div>
 {% endblock %}
