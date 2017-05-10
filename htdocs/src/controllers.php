@@ -9,6 +9,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 $app->mount('/', new Controllers\IndexController());
+$app->mount('/services', new Controllers\ServiceController());
 
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
