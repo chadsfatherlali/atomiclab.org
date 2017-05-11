@@ -19,17 +19,17 @@ class ServiceController implements ControllerProviderInterface
          */
         $controllers->post('/send-mail', function (Application $app, Request $request) {
             $data = $request->request->all();
-            $res = array('emailSend' => true);
+            $res = array('status' => true);
             
             $msg = Swift_Message::newInstance()
                 ->setSubject('[www.atomiclab.org] Atómicos')
                 ->setFrom(array('noreply@atomiclab.org'))
-                ->setTo(array('chadsfather@gmail.com'))
+                ->setTo(array('chadsfather@gmail.com', 'nosotros@atomiclab.org'))
                 ->setBody($data['msg']);
             
             $result = $app['mailer']->send($msg);
             
-            $res['emailSend'] = $result ? true : false; 
+            $res['status'] = $result ? true : false; 
             
             return $app->json($res);
         });
@@ -38,14 +38,20 @@ class ServiceController implements ControllerProviderInterface
          * Controlador para suscripción en mail chimp
          */
         $controllers->post('/suscribe-mailchimp', function (Application $app, Request $request) {
+            $res = array('status' => true);
             $data = $request->request->all();
-            $mailChimp = new MailChimp('3811e9042d3ef9428acb4314dfe9c6ba-us15');
+            $mailChimp = new MailChimp('c09acef28363e9bdd7a9debd6b5ff2b7-us15');
             $result = $mailChimp->post('lists/a01df64737/members', [
                 'email_address' => $data['email'],
                 'status' => 'subscribed',
             ]);
             
-            return $app->json($result);
+            if ($result['status'] !== 'subscribed') {
+                $res['status'] = false;
+                $res['msg'] = $result['title'];
+            }
+            
+            return $app->json($res);
         });
 
         return $controllers;
